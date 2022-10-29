@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Orange Toolz</title>
+</head>
+
+<body>
+    <nav>
+        <div class="balance">
+            <p>Balance : <span class="amount">$125</span></p>
+        </div>
+        <div class="user">
+            <div class="user-info">
+                <div class="user-img">
+                    <img src="./img/user.png" alt="">
+                </div>
+                <div class="user-name">
+                    <p>Alex Jui</p>
+                    <iconify-icon  onclick="toggleMenu()" class="dropdown-icon" icon="eva:arrow-ios-downward-fill"></iconify-icon>
+                </div>
+            </div>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <a href="#">My Profile</a>
+                    <a href="#">Add Found</a>
+                    <a href="#">API Documentation</a>
+                    <a href="#">Log Out</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+    <!-- js -->
+    <!-- icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
+</body>
+
+</html>
