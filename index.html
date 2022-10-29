@@ -7,36 +7,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <title>Orange Toolz</title>
+    <!-- Box Icons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <nav>
-        <div class="balance">
-            <p>Balance : <span class="amount">$125</span></p>
+        <div class="left-side">
+            <i class='bx bx-menu'></i>
         </div>
-        <div class="user">
-            <div class="user-info">
-                <div class="user-img">
-                    <img src="./img/user.png" alt="">
+        <div class="right-side">
+            <div class="balance">
+                <p>Balance : <span class="amount">$125</span></p>
+            </div>
+            <div class="user">
+                <div class="user-info">
+                    <div class="user-img">
+                        <img src="./img/user.png" alt="">
+                    </div>
+                    <div class="user-name">
+                        <p>Alex Jui</p>
+                        <iconify-icon onclick="toggleMenu()" class="dropdown-icon" icon="eva:arrow-ios-downward-fill">
+                        </iconify-icon>
+                    </div>
                 </div>
-                <div class="user-name">
-                    <p>Alex Jui</p>
-                    <iconify-icon  onclick="toggleMenu()" class="dropdown-icon" icon="eva:arrow-ios-downward-fill"></iconify-icon>
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <a href="#">My Profile</a>
+                        <a href="#">Add Found</a>
+                        <a href="#">API Documentation</a>
+                        <a href="#">Log Out</a>
+                    </div>
                 </div>
             </div>
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <a href="#">My Profile</a>
-                    <a href="#">Add Found</a>
-                    <a href="#">API Documentation</a>
-                    <a href="#">Log Out</a>
-                </div>
-            </div>
-        </div>
         </div>
     </nav>
 
-
+    <!-- Side Navigation Bar -->
+    <div class="side-bar">
+        <div class="logo">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="logo-name">Orange</span>
+        </div>
+        <!-- sidebar links -->
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="link-name">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-search-alt'></i>
+                    <span class="link-name">
+                        Lookup
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-file'></i>
+                    <span class="link-name">
+                        Files
+                    </span>
+                </a>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxl-trello'></i>
+                        <span class="link-name">
+                            Logs
+                        </span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sidebar-submenu close">
+                    <li><a href="#"> <i class='bx bxs-file-blank'></i><span class="link-name">Single/Bulk
+                                Lookup</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart-download'></i>
+                    <span class="link-name">
+                        Buy Credits
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-paint-roll'></i>
+                    <span class="link-name">
+                        Integration
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-circle'></i>
+                    <span class="link-name">
+                        My Profile
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+<!------------------------------------------------- home section  --------------------------------->
+    <section class="home-section">
+        <div class="header-section">
+            <div class="user-section">
+                <div class="profileuser-img">
+                    <img src="./img/user.png" alt="">
+                </div>
+                <div class="profileuser-info">
+                    <h2>Alex Jui</h2>
+                    <p>alexajui@gmail.com</p>
+                    <p>+1 354 785 4125</p>
+                    <p>3213 D Street, Columbus, USA</p>
+                </div>
+            </div>
+            <div class="card-section">
+                <h2>Your Credit Cards</h2>
+                <div class="cards">
+                    <!--------------------------------- Card 1---------------------------------->
+                    <div class="card">
+                        <div class="delete-btn">
+                            <i class='bx bxs-trash'></i>
+                        </div>
+                        <h1>Credit Card 1</h1>
+                        <h3>xxxxxxxxxxxx4684</h3>
+                    </div>
+                    <!--------------------------------- Card 2---------------------------------->
+                    <div class="active-card">
+                        <div class="delete-btn">
+                            <i class='bx bxs-trash'></i>
+                        </div>
+                        <h1>Credit Card 2 (Default)</h1>
+                        <h3>xxxxxxxxxxxx4242</h3>
+                    </div>
+                    <!--------------------------------- Card 3---------------------------------->
+                    <div class="card">
+                        <div class="delete-btn">
+                            <i class='bx bxs-trash'></i>
+                        </div>
+                        <h1>Credit Card 3</h1>
+                        <h3>xxxxxxxxxxxx1254</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!------------------------------------------------- body section  --------------------------------->
     <!-- js -->
     <!-- icons -->
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
@@ -44,6 +169,14 @@
         let subMenu = document.getElementById("subMenu");
         function toggleMenu() {
             subMenu.classList.toggle("open-menu");
+        }
+        let arrow = document.querySelectorAll(".arrow");
+
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu")
+            })
         }
     </script>
 </body>
