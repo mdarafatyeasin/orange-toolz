@@ -14,7 +14,6 @@
 <body>
     <nav>
         <div class="left-side">
-            <i class='bx bx-menu'></i>
         </div>
         <div class="right-side">
             <div class="balance">
@@ -116,7 +115,7 @@
             </li>
         </ul>
     </div>
-<!------------------------------------------------- home section  --------------------------------->
+    <!------------------------------------------------- home section  --------------------------------->
     <section class="home-section">
         <div class="header-section">
             <div class="user-section">
@@ -160,8 +159,57 @@
                 </div>
             </div>
         </div>
+        <!------------------------------------------------- body section  --------------------------------->
+        <section class="body-section">
+            <div class="sub-nav">
+                <ul>
+                    <li>Update Profile</li>
+                    <li>Change Password</li>
+                    <li>Email Notifications</li>
+                    <li>Auto Recharge Settings</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="sub-content">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label> Notify me when list verification completes
+                <div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label> Notify me when list export completes
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label> Notify me when list verification result is about to expire
+                </div>
+                <hr>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label> Receive Low Credits Email
+                </div>
+                <div class="email-field">
+                    <label for="email">
+                        <p>Send Email to*</p>
+                        <input type="text" placeholder="alexajui@gmail.com">
+                    </label>
+                    <label for="amount">
+                        <p>When credits are less than*</p>
+                        <input type="number" placeholder="50">
+                    </label>
+                </div>
+                <hr>
+                <button class="save-btn">Save Change</button>
+            </div>
+        </section>
     </section>
-<!------------------------------------------------- body section  --------------------------------->
+
     <!-- js -->
     <!-- icons -->
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
